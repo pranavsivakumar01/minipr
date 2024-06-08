@@ -1,51 +1,157 @@
-.App {
-  text-align: left;
-  width:1024px;
-  margin: 30px auto;
+/* Welcome Page CSS */
+.WelcomePage {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  background-color: #f0f8ff; /* Light cyan background */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.WelcomePage h1 {
+  font-size: 3em;
+  color: #01579b; /* Dark blue for the welcome message */
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out; /* Fade-in and slide-down animation */
+}
+
+.WelcomePage p {
+  font-size: 1.5em;
+  color: #37474F; /* Consistent dark slate gray for text */
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out; /* Fade-in and slide-up animation */
+}
+
+.WelcomePage .health-info {
+  font-size: 1.2em;
+  color: #37474F; /* Consistent dark slate gray for text */
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out; /* Fade-in and slide-up animation */
+}
+
+.WelcomePage button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  color: white;
+  background: #01579b; /* Dark blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.WelcomePage button:hover {
+  background: #014a79; /* Slightly darker blue on hover */
+}
+
+.WelcomePage button:active {
+  background: #013a5c; /* Even darker blue on click */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Fade In and Slide Down Animation */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In and Slide Up Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* App CSS */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light cyan background */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #01579b; /* Dark blue for header */
   padding: 20px;
   color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition for header background color */
 }
 
 .App-intro {
-  font-size: large;
+  font-size: 1.2em;
+  color: #37474F; /* Consistent dark slate gray for text */
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out; /* Fade-in and slide-up animation */
 }
 
-form{
-
-  margin: 10px;
-
+form {
+  margin: 0 auto;
+  width: 60%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for form box-shadow and transform */
 }
-label, input{
+
+label {
   display: block;
-  margin: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #01579b; /* Darker blue for labels */
 }
 
-input{
-
-  padding: 10px 3px;
-   
+input {
+  display: block;
+  width: calc(100% - 22px); /* Adjust input width */
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #b3e5fc; /* Light blue border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease; /* Smooth transition for input border color */
 }
 
-input[type='submit']{
+input[type='submit'] {
   padding: 10px 20px;
   border-radius: 5px;
-  background: #DDDDDD;
-  color: #000000;
+  background: #01579b; /* Dark blue for button */
+  color: #fff;
   border: none;
   cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition for button background color */
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input[type='submit']:hover {
+  background: #014a79; /* Slightly darker blue on hover */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
